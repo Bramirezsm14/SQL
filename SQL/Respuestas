@@ -1,0 +1,9 @@
+¿Que propuesta harías para el mes 1 considerando un presupuesto de
+$3.000.000?
+Trataria de demorar el tiempo de entrega 1 dia para que minorizen todos los costos y evaluaria seriamente en dejar aun el carrier C ya que hace solo envios a AMBA por el doble de precio y trayendo menos cantidad teniendo asi que realizar 14 viajes aprox  para  cubrir la cantidad de los envios,  tardando 2 dias mas que el  carrier A que debe hacer 4 viajes de 3 dias cada viaje con un total de 12 dias trancurridos.
+
+¿Qué queries realizaste?
+SELECT Carrier.name,Carrier.capacity,Costos.costo,Cantidad_envios.zonaa,Costos.zona,Cantidad_de_envios,
+Carrier.capacity * Costos.costo * Cantidad_envios.Cantidad_de_envios / Carrier.capacity as monto
+FROM Carrier INNER JOIN Costos ON Carrier.id = Costos.carrierId
+inner join   Cantidad_envios ON Cantidad_envios.zonaa=Costos.zona
